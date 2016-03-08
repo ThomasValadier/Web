@@ -74,11 +74,11 @@ $active_group = 'default';
 $query_builder = TRUE;
 
 $db['default'] = array(
-	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => '',
-	'password' => '',
-	'database' => '',
+	'dsn'	=> 'mysql:host=eu-cdbr-azure-west-d.cloudapp.net; dbname=supervoisin; charset=utf8;',
+	'hostname' => 'eu-cdbr-azure-west-d.cloudapp.net',
+	'username' => 'b7af26c6f9857c',
+	'password' => '4a49440e',
+	'database' => 'supervoisin',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
