@@ -4,34 +4,33 @@ class AuthentificationProvider extends CI_Controller {
 
 	public function index()
 	{
-		  $this->output->set_status_header('404'); 
+		$this->load->view('home');
 	}
 
 	public function proceed($provider)
 	{
-		log_message('debug', "controllers.HAuth.proceed($provider) called");
+		log_message('debug', "controllers.HAuth.login($provider) called");
 
 		try
 		{
-			log_message('debug', 'controllers.HAuth.proceed: loading HybridAuthLib');
+			log_message('debug', 'controllers.HAuth.login: loading HybridAuthLib');
 			$this->load->library('HybridAuthLib');
 
 			if ($this->hybridauthlib->providerEnabled($provider))
 			{
-				log_message('debug', "controllers.HAuth.proceed: service $provider enabled, trying to authenticate.");
+				log_message('debug', "controllers.HAuth.login: service $provider enabled, trying to authenticate.");
 				$service = $this->hybridauthlib->authenticate($provider);
 
 				if ($service->isUserConnected())
 				{
-					log_message('debug', 'controller.HAuth.proceed: user authenticated.');
+					log_message('debug', 'controller.HAuth.login: user authenticated.');
 
 					$user_profile = $service->getUserProfile();
 
-					log_message('info', 'controllers.HAuth.proceed: user profile:'.PHP_EOL.print_r($user_profile, TRUE));
+					log_message('info', 'controllers.HAuth.login: user profile:'.PHP_EOL.print_r($user_profile, TRUE));
 
 					$data['user_profile'] = $user_profile;
 
-					$this->load->view('memberspace/home/login_endpoint',$data);
 				}
 				else // Cannot authenticate user
 				{
@@ -40,7 +39,7 @@ class AuthentificationProvider extends CI_Controller {
 			}
 			else // This service is not enabled.
 			{
-				log_message('error', 'controllers.HAuth.proceed: This provider is not enabled ('.$provider.')');
+				log_message('error', 'controllers.HAuth.login: This provider is not enabled ('.$provider.')');
 				show_404($_SERVER['REQUEST_URI']);
 			}
 		}
@@ -54,11 +53,11 @@ class AuthentificationProvider extends CI_Controller {
 				case 2 : $error = 'Provider not properly configured.'; break;
 				case 3 : $error = 'Unknown or disabled provider.'; break;
 				case 4 : $error = 'Missing provider application credentials.'; break;
-				case 5 : log_message('debug', 'controllers.HAuth.proceed: Authentification failed. The user has canceled the authentication or the provider refused the connection.');
+				case 5 : log_message('debug', 'controllers.HAuth.login: Authentification failed. The user has canceled the authentication or the provider refused the connection.');
 				         //redirect();
 				         if (isset($service))
 				         {
-				         	log_message('debug', 'controllers.HAuth.proceed: logging out from service.');
+				         	log_message('debug', 'controllers.HAuth.login: logging out from service.');
 				         	$service->logout();
 				         }
 				         show_error('User has cancelled the authentication or the provider refused the connection.');
@@ -74,7 +73,7 @@ class AuthentificationProvider extends CI_Controller {
 				$service->logout();
 			}
 
-			log_message('error', 'controllers.HAuth.proceed: '.$error);
+			log_message('error', 'controllers.HAuth.login: '.$error);
 			show_error('Error authenticating user.');
 		}
 	}

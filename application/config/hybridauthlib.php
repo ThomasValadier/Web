@@ -12,7 +12,7 @@
 $config =
 	array(
 		// set on "base_url" the relative url that point to HybridAuth Endpoint
-		'base_url' => '/MemberSpace/Home/login_endpoint',
+		'base_url' => '/AuthentificationProvider/endpoint',
 
 		"providers" => array (
 			// openid providers

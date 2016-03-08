@@ -38,7 +38,7 @@
 								Connexion avec ...
 								<div class="social-buttons">
 									<a href="./AuthentificationProvider/proceed/Facebook" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</a>
-									<a href="./AuthentificationProvider/proceed/Linkedin" class="btn btn-ln"><i class="fa fa-linkedin"></i> Linkedin</a>
+									<a href="./AuthentificationProvider/proceed/LinkedIn" class="btn btn-ln"><i class="fa fa-linkedin"></i> Linkedin</a>
 								</div>
                                 ou
 								 <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
