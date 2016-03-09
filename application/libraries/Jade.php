@@ -60,7 +60,7 @@ class Jade {
         if(! $this->jade) {
             $this->settings();
         }
-        $view = $this->jade_view_path . DIRECTORY_SEPARATOR . $view . '.jade';
+        $view = $this->view_path . DIRECTORY_SEPARATOR . $view . '.jade';
         if(! file_exists($view)) {
             $isIndex = (strtr('\\', '/', substr($view, -11)) === '/index.jade');
             $view = $isIndex ? substr($view, 0, -11) . '.jade' : substr($view, 0, -5) . DIRECTORY_SEPARATOR . 'index.jade';
