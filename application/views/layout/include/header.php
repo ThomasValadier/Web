@@ -13,7 +13,8 @@
 
    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-
+   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+ 
     <?php       
         echo link_tag('Assets/styles/css/Base.css'); 
     ?>
@@ -26,7 +27,8 @@
   <div class="container-fluid">
       <ul class="nav navbar-nav">
         <li class="active"><a href="#">Accueil</a></li>
-        <li><a href="#">Llaurem</a></li>
+        <li><a href="#">Les offres</a></li>
+        <li><a href="#">Contact</a></li>
       </ul> 
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown">
@@ -41,7 +43,7 @@
 									<a href="./AuthentificationProvider/proceed/LinkedIn" class="btn btn-ln"><i class="fa fa-linkedin"></i> Linkedin</a>
 								</div>
                                 ou
-								 <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+								 <?= form_open('Account/Login'); ?>
 										<div class="form-group">
 											 <label class="sr-only" for="email">Adresse e-mail</label>
 											 <input type="email" class="form-control" id="email" placeholder="Adresse e-mail" required>
@@ -59,7 +61,7 @@
 											 <input type="checkbox"> me garder connecté
 											 </label>
 										</div>
-								 </form>
+								 <?= form_close(); ?>
 							</div>
 							<div class="bottom text-center">
 								Nouveau ici ? <a href="#"><b>Rejoignez-nous ! ☺</b></a>
