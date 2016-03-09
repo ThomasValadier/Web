@@ -1,0 +1,301 @@
+
+body {
+    min-height: 600px;
+}
+
+#boxgauche {
+    min-height: 1000px;
+    background-image: url('../index/image/background1.jpg');
+    border-left: solid black;
+    word-wrap: break-word; /*pour ne pas qu'il y ait un retour avant la fin de la la boxgauche meme si l'utilisateur entre un commentaire sans espaces.*/
+
+}
+
+.glyphicon-search {
+    margin-top: 50%;
+    color: black;
+    background-color: grey;
+    border-radius: 10px;
+    opacity: 0.8;
+    font-size: 45px;
+    position: fixed;
+    z-index: 2;
+
+}
+
+#boxdroite h2, #boxgauche h2 {
+    background: #b4e391; /* Old browsers */
+    background: -moz-linear-gradient(-45deg, #b4e391 0%, #61c419 50%, #b4e391 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, #b4e391 0%, #61c419 50%, #b4e391 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, #b4e391 0%, #61c419 50%, #b4e391 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b4e391', endColorstr='#b4e391', GradientType=1); /* IE6-9 fallback on horizontal gradient */;
+    font-size: 50px;
+    padding: 10px;
+    margin: inherit;
+    margin-left: -10px;
+    margin-right: -10px;
+    border-bottom: dashed black;
+    text-align: center;
+    font-family: "Lucida Bright";
+
+}
+
+#boxgauche {
+    border-right: 10px solid whitesmoke;
+}
+
+#boxdroite {
+
+    border-left: 10px solid whitesmoke;
+}
+
+#boxdroite h2 {
+    box-shadow: #0a0a0a -10px 5px 8px;
+
+}
+
+#boxgauche h2 {
+    box-shadow: #0a0a0a 10px 5px 8px;
+}
+
+#boxdroite {
+    min-height: 1000px;
+    background: #959595; /* Old browsers */
+    background: -moz-linear-gradient(-45deg, #959595 0%, #0d0d0d 46%, #010101 50%, #0a0a0a 53%, #4e4e4e 76%, #383838 87%, #1b1b1b 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, #959595 0%, #0d0d0d 46%, #010101 50%, #0a0a0a 53%, #4e4e4e 76%, #383838 87%, #1b1b1b 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, #959595 0%, #0d0d0d 46%, #010101 50%, #0a0a0a 53%, #4e4e4e 76%, #383838 87%, #1b1b1b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#959595', endColorstr='#1b1b1b', GradientType=1);
+    /* background-image: url('../index/image/background.jpg');*/
+
+    text-align: center;
+}
+
+#boxdroite input, textarea, select {
+    background-color: grey;
+    width: 335px;
+    box-shadow: lightblue 3px 3px 15px 3px;
+    border-color: lightblue lightblue lightgrey lightgrey;
+    border-width: 5px;
+    border-radius: 15px;
+    cursor: pointer;
+    color: lightgray;
+}
+
+#boxdroite .depose form {
+    margin-top: -100px;
+}
+
+#boxdroite input:focus, textarea:focus, select:focus {
+    background-color: lightslategray;
+}
+
+#boxdroite button {
+    margin-top: 25px;
+    width: 200px;
+    background-color: lightblue;
+}
+
+#descri {
+    margin-left: 200px;
+    display: inline-block;
+}
+
+.photoprofil img {
+    margin-top: 10px;
+    border-radius: 50px;
+    max-height: 200px;
+    max-width: 200px;
+}
+
+.pseudo {
+    margin-top: 40px;
+
+}
+
+.graphique {
+    margin-top: -250px;
+    margin-left: 20px;
+}
+
+.barGraph {
+    background: url(images/horizontal_grid_line_50_pixel.png) bottom left;
+    border-bottom: 3px solid #333;
+    font: 9px Helvetica, Geneva, sans-serif;
+    height: 200px;
+    width: 160px;
+    padding: 0;
+    position: relative;
+}
+
+.barGraph .bricolage {
+    height: 20px; /*on peut considérer que 20 px = une unité donc si le membre participe 2 fois à une activité de brico. il aura 40px.*/
+    left: 0;
+    background-color: #1b6d85;
+}
+
+.barGraph .petsitting {
+    height: 40px; /*on peut considérer que 20 px = une unité donc si le membre participe 2 fois à une activité de petsitting il aura 40px.*/
+    left: 40px;
+    background-color: #2b542c;
+}
+
+.barGraph .assistanat {
+    height: 80px; /*on peut considérer que 20 px = une unité donc si le membre participe 2 fois à une activité de assist. il aura 40px.*/
+    left: 80px;
+    background-color: #67b168;
+}
+
+.barGraph .informatique {
+    height: 60px; /*on peut considérer que 20 px = une unité donc si le membre participe 2 fois à une activité info il aura 40px.*/
+    left: 120px;
+    background-color: silver;
+}
+
+.barGraph li {
+    background: #666 repeat-y top right;
+    border: 1px solid #555;
+    border-bottom: none;
+    bottom: 0;
+    position: absolute;
+    list-style: none;
+    text-align: center;
+    width: 40px;
+    display: inline-block;
+}
+
+.bri {
+    height: 40px;
+    width: 40px;
+    background-color: #1b6d85;
+}
+
+.pets {
+    height: 40px;
+    width: 40px;
+    background-color: #2b542c;
+}
+
+.assi {
+    height: 40px;
+    width: 40px;
+    background-color: #67b168;
+}
+
+.info {
+    height: 40px;
+    width: 40px;
+    background-color: silver;
+}
+
+.depose input, select {
+    padding: 10px;
+    margin: 10px;
+}
+
+.depose {
+    margin-top: 100px;
+}
+
+.depose textarea {
+    margin-top: 15px;
+}
+
+.foot {
+    height: 10%;
+    display: none;
+    position: fixed;
+    bottom: 0;
+    margin-left: -15px;
+    margin-right: -15px;
+
+}
+
+.foot .catfoot {
+    text-align: center;
+    font-size: 40px;
+    height: 100%;
+    border: solid #0f0f0f;
+    background-color: gainsboro;
+    color: black;
+    font-family: Elephant;
+
+}
+
+.foot .catfoot:hover {
+    height: 100%;
+    background-color: #2b542c;
+}
+
+.finish {
+    background-image: url('../index/image/background.jpg');
+    height: 200px;
+    display: none;
+    position: fixed;
+    bottom: 0;
+    font-size: 25px;
+}
+
+#recher select {
+
+    color: inherit;
+    background-color: inherit;
+    border-color: white;
+    box-shadow: inherit;
+    height: inherit;
+    color: white;
+}
+
+#recher option {
+    color: grey;
+}
+
+#recher form {
+    text-align: center;
+}
+
+#ancre {
+    margin-top: 500px;
+}
+
+#toggle {
+    background: darkkhaki;
+    border: 1px dashed black;
+    margin: 20px;
+    text-align: center
+}
+
+#toggle p {
+    text-align: center;
+    padding: 0
+}
+
+.to_top {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    display: none;
+    opacity: 0.9;
+    font-size: 40px;
+    z-index: 1;
+}
+
+@media all and (max-width: 991px) {
+    .foot .catfoot {
+        font-size: 21px;
+    }
+
+    #boxdroite, #boxgauche {
+        border: inherit;
+    }
+
+    .finish {
+        display: none;
+    }
+}
+
+@media all and (min-width: 1230px) {
+    .foot {
+        width: 1400px;
+    }
+
+}
