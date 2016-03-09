@@ -16,61 +16,9 @@
    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
  
     <?php       
-        echo link_tag('Assets/styles/css/Base.css'); 
+        echo link_tag('Assets/styles/Base.css'); 
     ?>
     
-   <title>✪ Super Voisin o/ ✪</title>
+   <title>✪ Super Voisin ✪</title>
 </head>
 <body>
-<div class="container">
-<nav class="navbar navbar-default navbar-inverse" role="navigation">
-  <div class="container-fluid">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Accueil</a></li>
-        <li><a href="#">Les offres</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul> 
-      <ul class="nav navbar-nav navbar-right">
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Connexion/Inscription</b> <span class="caret"></span></a>
-			<ul id="login-dp" class="dropdown-menu">
-				<li>
-					 <div class="row">
-							<div class="col-md-12">
-								Connexion avec ...
-								<div class="social-buttons">
-									<a href="./AuthentificationProvider/proceed/Facebook" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</a>
-									<a href="./AuthentificationProvider/proceed/LinkedIn" class="btn btn-ln"><i class="fa fa-linkedin"></i> Linkedin</a>
-								</div>
-                                ou
-								 <?= form_open('Account/Login'); ?>
-										<div class="form-group">
-											 <label class="sr-only" for="email">Adresse e-mail</label>
-											 <input type="email" class="form-control" id="email" placeholder="Adresse e-mail" required>
-										</div>
-										<div class="form-group">
-											 <label class="sr-only" for="password">Password</label>
-											 <input type="password" class="form-control" id="password" placeholder="Mot-de-passe" required>
-                                             <div class="help-block text-right"><a href="">Mot-de-passe oublié ?</a></div>
-										</div>
-										<div class="form-group">
-											 <button type="submit" class="btn btn-primary btn-block">Connexion</button>
-										</div>
-										<div class="checkbox">
-											 <label>
-											 <input type="checkbox"> me garder connecté
-											 </label>
-										</div>
-								 <?= form_close(); ?>
-							</div>
-							<div class="bottom text-center">
-								Nouveau ici ? <a href="#"><b>Rejoignez-nous ! ☺</b></a>
-							</div>
-					 </div>
-				</li>
-			</ul>
-        </li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>

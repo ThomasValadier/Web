@@ -3,6 +3,7 @@
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
    <script src="Assets/javascript/custom.js"></script>
+   <script src="Assets/javascript/home.js"></script>
    <script>
    <?php
         $mesageStack = $this->session->userdata('ServiceMessage');
@@ -15,5 +16,6 @@
         }
    ?>
    </script>
+   
 </body>
 </html>

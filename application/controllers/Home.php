@@ -6,7 +6,7 @@ class Home extends CI_Controller {
     {
         $this->load->library('session');
         $this->load->view('layout/include/header');
-        $this->load->view('Home', $data);
+        $this->load->view('Home', $data); 
         $this->load->view('layout/include/footer');
     }
 }

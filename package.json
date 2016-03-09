@@ -1,0 +1,26 @@
+{
+  "name": "SuperVoisin",
+  "version": "1.0.0",
+  "dependencies": {
+    "gulp-cli": "^1.0.0"
+  },
+  "devDependencies": {
+    "gulp": "~3.8.11",
+    "gulp-less": "~3.0.3",
+    "gulp-util": "~2.2.14"
+  },
+  "scripts": {
+    "start": "gulp && exit 0"
+  },
+  "keywords": [],
+  "author": "Groupe 21 - Ingesup",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SuperVoisin/Web.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SuperVoisin/Web/issues"
+  },
+  "homepage": "http://supervoisin.azurewebsites.net/"
+}

@@ -28,7 +28,6 @@ install:
   - rm -rf CodeIgniter-$CI_VERSION
 
 script:
-  - phpunit
   - phpunit -c phpunit.xml
   
 notifications:
